@@ -1,0 +1,331 @@
+$primary-color: #ffe9ceff;
+$secondary-color: #fff8d6ff;
+$tertiary-color: #ffb5c2ff;
+$text-color:  #ffffffff;
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+*,
+::before ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin sans";
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+h1 {
+  font-family: "MV Boli";
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: $secondary-color;
+}
+
+.header-container {
+  width: 100%;
+  @include flex-center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  &__logo {
+    color: $primary-color;
+    font-size: 30px;
+  }
+  &__cart {
+    position: relative;
+    color: $primary-color;
+    font-size: 30px;
+    &:hover a {
+      color: lighten($primary-color, 10%);
+      transition: 0.3s;
+    }
+    &__number {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      position: absolute;
+      padding: 5px 5px;
+      height: 14px;
+      background-color: $tertiary-color;
+      color: $text-color;
+      top: -15px;
+      right: -15px;
+      border-radius: 200px;
+      & p {
+        margin: 0;
+        padding: 0;
+        height: auto;
+      }
+    }
+  }
+}
+
+.container {
+  @include flex-center;
+  width: 100%;
+  background: $tertiary-color;
+  .cart-card {
+    overflow: hidden;
+    margin: 50px 15px;
+    display: none;
+    width: 600px;
+    background: $text-color;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 0px 10px 0px rgba(63, 63, 63, 0.49);
+    .cart {
+      margin-left: 10px;
+    }
+    &__recap {
+      margin: 10px 0 10px 10px;
+      width: 90%;
+      background: $text-color;
+
+      &__row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .first-line {
+        @include flex-center();
+        font-size: 19px;
+        text-decoration: underline;
+      }
+      &__title {
+        @include flex-center();
+        width: 120px;
+        height: 30px;
+        font-weight: bold;
+      }
+      &__data {
+        @include flex-center();
+        width: 120px;
+        margin: 2px 0;
+        height: 30px;
+        .fa-trash:hover {
+          cursor: pointer;
+          opacity: 0.7;
+          font-size: 17px;
+          transition: 0.3s;
+        }
+      }
+      .cart-card__form__button {
+        margin: 5px 0;
+        width: 130px;
+        padding: 20px;
+        border-radius: 5px;
+        border: solid 1px $primary-color;
+      }
+    }
+    &__form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $primary-color;
+      height: 100%;
+      & .form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+      }
+      .name-and-lastname {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .postal-and-city {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .cart-card__form-line {
+        margin: 5px 0px;
+        & label {
+          display: none;
+        }
+      }
+      .cart-card__form-line {
+        width: 100%;
+        max-width: 300px;
+      }
+      #bloc__phone {
+        width: 100%;
+      }
+      #bloc__mail {
+        width: 100%;
+
+        input[type="text"] {
+          margin: 10px;
+        }
+        #bloc__adress {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+      &__buttons {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+      }
+      &__quantity {
+        margin-bottom: 20px;
+      }
+      &__color {
+        margin-bottom: 40px;
+      }
+      .cart-card__form__button {
+        padding: 20px;
+        background: $secondary-color;
+        border-radius: 5px;
+        border: solid 1px $primary-color;
+      }
+
+      .erreur {
+        padding: 5px 0;
+        color: red;
+      }
+
+      .to-pay {
+        font-family: Josefin Sans;
+        font-size: 18px;
+        margin-bottom: 20px;
+        @include flex-center;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .if-empty-cart {
+    @include flex-center;
+    height: 90vh;
+    & h2 {
+      margin-top: 75px;
+      a {
+        color: black;
+        text-decoration: underline;
+      }
+    }
+  }
+  .total {
+    margin-bottom: 0;
+  }
+}
+
+.title-quantity {
+  @include flex-center;
+}
+
+.title-remove {
+  @include flex-center;
+}
+
+.data-bin {
+  @include flex-center;
+}
+
+.data-quantity {
+  @include flex-center;
+}
+
+.width-to-empty-cart {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  .to-empty-cart {
+    @include flex-center;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+footer {
+  background: $primary-color;
+  @include flex-center;
+  width: 100%;
+  height: 60px;
+  .nav {
+    max-width: 1700px;
+    color: $text-color;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 0 40px;
+    &__link {
+      color: $text-color;
+      font-size: 24px;
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 530px) {
+  .cart-card {
+    height: 750px;
+  }
+
+  .data-bin {
+    display: none;
+  }
+  .data-price {
+    @include flex-center;
+  }
+  .name-and-lastname,
+  .postal-and-city {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cart-card__form-line {
+    @include flex-center;
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  h2 {
+    color: black;
+    text-align: center;
+  }
+
+  footer {
+    .nav {
+      width: 90%;
+      &__link {
+        font-size: 20px;
+      }
+    }
+  }
+}

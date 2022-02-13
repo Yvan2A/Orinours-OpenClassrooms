@@ -1,0 +1,267 @@
+*,
+::before ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin sans";
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #352208;
+}
+
+h1 {
+  font-family: "MV Boli";
+}
+
+.container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background: #e1bb80;
+}
+
+.header-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+.nav__logo {
+  color: #352208;
+  font-size: 30px;
+}
+
+.nav__cart {
+  position: relative;
+  color: #352208;
+  font-size: 30px;
+}
+
+.nav__cart:hover a {
+  color: #613e0f;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav__cart__number {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  position: absolute;
+  padding: 5px 5px;
+  height: 14px;
+  background-color: #7b6b43;
+  color: #dee9f7;
+  top: -15px;
+  right: -15px;
+  border-radius: 200px;
+}
+
+.nav__cart__number p {
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  background: #7b6b43;
+}
+
+.container .product-card {
+  margin: 50px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 600px;
+  background: #dee9f7;
+  border-radius: 20px 20px 20px 20px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(63, 63, 63, 0.49);
+          box-shadow: 0px 0px 10px 0px rgba(63, 63, 63, 0.49);
+}
+
+.container .product-card__img {
+  border-radius: 20px 20px 20px 20px;
+}
+
+.container .product-card__infos {
+  color: #352208;
+  padding: 15px;
+  height: 100%;
+}
+
+.container .product-card__infos__title {
+  font-family: "MV Boli";
+  font-size: 32px;
+}
+
+.container .product-card__infos__description {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.container .product-card__infos__price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.container .product-card__infos__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.container .product-card__infos__quantity {
+  margin-bottom: 20px;
+}
+
+.container .product-card__infos__color {
+  margin-bottom: 40px;
+}
+
+.container .product-card__infos .added-to-cart-confirmation {
+  visibility: hidden;
+}
+
+.container .product-card__infos .added-to-cart-confirmation p {
+  padding: 5px;
+  background-color: #64c264;
+  border: #368a36 1px solid;
+}
+
+.container .product-card__infos .product-card__infos__button {
+  padding: 20px;
+  background: #e1bb80;
+  border-radius: 5px;
+  border: solid 1px #352208;
+}
+
+.container .product-card__infos .back-to-home {
+  background: #d8d8d8;
+}
+
+.container .product-card__img {
+  height: 50%;
+  width: 100%;
+  background: #444;
+}
+
+.container .product-card__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+#bearNum {
+  width: 50px;
+}
+
+footer {
+  background: #352208;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  height: 60px;
+}
+
+footer .nav {
+  max-width: 1700px;
+  color: #dee9f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  padding: 0 40px;
+}
+
+footer .nav__link {
+  color: #dee9f7;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  footer .nav {
+    width: 90%;
+  }
+  footer .nav__link {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container .product-card__infos__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .product-card__infos__buttons .product-card__infos__button {
+    margin: 5px 0;
+  }
+}
+/*# sourceMappingURL=product.css.map */
