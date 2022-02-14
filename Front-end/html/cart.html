@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../css/cart.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+    <title>Panier</title>
+</head>
+<body>
+        <header>
+        <div class="container-fluid">
+            <div class="header-container">
+                <div class="nav">
+                    <a href="index.html"><h1 class="nav__logo">ORINOURS</h1></a>
+                    <a href="cart.html"><div class="nav__cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="cart-card">
+                <h2 class="cart">Votre panier</h2>
+                <div class="cart-card__recap">
+                    <div class="cart-card__recap__row ">
+                        <div class="cart-card__recap__title first-line">Nom</div>
+                        <div class="cart-card__recap__title title-quantity first-line">Quantité</div>
+                        <div class="cart-card__recap__title data-price first-line">Prix </div>
+
+                    </div>                     
+                    <div class="width-to-empty-cart">
+                        <a href="cart.html">
+                            <div class="cart-card__form__button to-empty-cart">
+                                Vider le panier
+                            </div>
+                        </a>
+                    </div>
+                    <h2 class="total"></h2>            
+                </div>
+    
+                <div class="cart-card__form">
+                    <h2>Votre adresse de livraison</h2>
+                    <form class="form">
+                        <div class="name-and-lastname">
+                            <div class="cart-card__form-line" id="bloc__name">
+                                <label for="name">Prénom :</label>
+                                <input type="text" placeholder="Prénom" id="name" name="user_name" required> 
+                            </div>
+                            <div class="cart-card__form-line" id="bloc__lastname">
+                                <label for="lastname">Nom :</label>
+                                <input type="text" placeholder="Nom" id="lastname" name="user_lastname" required>
+                            </div>
+                        </div>        
+                        <div class="postal-and-city">
+                            <div class="cart-card__form-line" id="bloc__postal">
+                                <label for="postal">Code postal :</label>
+                                <input type="text" placeholder="Code postal" id="postal" name="user_postal" required>
+                            </div>
+                            <div class="cart-card__form-line" id="bloc__city">
+                                <label for="city">Ville :</label>
+                                <input type="text" placeholder="Ville" id="city" name="user_city" required>
+                            </div>
+                        </div>
+                        <div class="cart-card__form-line" id="bloc__adress">
+                            <label for="adress">Adresse :</label>
+                            <input type="text" placeholder="Adresse de livraison" id="adress" name="user_adress" required>
+                        </div>
+                        <div class="cart-card__form-line" id="bloc__mail">
+                            <label for="mail">Adresse mail :</label>
+                            <input type="email" placeholder="Adresse mail" id="mail" name="user_mail" required>
+                        </div>
+                        <div class="cart-card__form-line" id="bloc__phone">
+                            <label for="phone" >Numéro de téléphone :</label>
+                            <input type="tel" placeholder="Numéro de téléphone" id="phone" name="phone" required >
+                        </div>
+                        <div class="erreur"></div>
+                        <div class="cart-card__form__buttons">
+                                <div id="submit" class="cart-card__form__button to-pay" >Commander</div>
+                        </div>
+                    </form>
+
+                    <div class="added-to-cart-confirmation">
+                        <p class="confirmation-text"></p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="if-empty-cart">
+                <h2>Attention votre panier est vide. <a href="index.html">Cliquez ici pour le remplir !</a></h2>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="nav">
+            <a href="" class="nav__link">Contact</a>
+            <a href="" class="nav__link">Mentions légales</a>
+        </div>
+    </footer>
+    <script type="module" src="scripts/cart.js"></script>
+
+</body>
+</html>

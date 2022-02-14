@@ -1,0 +1,144 @@
+*,
+::before ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin sans";
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffffff;
+}
+
+h1 {
+  font-family: "MV Boli";
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #ffb5c2ff;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.nav__logo {
+  color: #ffffffff;
+  font-size: 30px;
+}
+
+.nav__cart {
+  position: relative;
+  color: #ffffffff;
+  font-size: 30px;
+}
+
+.nav__cart:hover a {
+  color: #e1bb80;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav__cart__number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  position: absolute;
+  padding: 5px 5px;
+  height: 14px;
+  background-color: #7b6b43;
+  color: #e1bb80;
+  top: -15px;
+  right: -15px;
+  border-radius: 200px;
+}
+
+.nav__cart__number p {
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+.recap {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  background: #fff8d6ff;
+}
+
+.recap .confirm {
+  padding: 20px;
+  overflow: hidden;
+  margin: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 600px;
+  background: #e1bb80;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 0px 10px 0px rgba(63, 63, 63, 0.49);
+  text-decoration: none;
+  height: 200px;
+}
+
+.recap p {
+  font-size: 19px;
+}
+
+.recap p span {
+  font-weight: bold;
+}
+
+footer {
+  background: #ffb5c2ff;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  height: 60px;
+}
+
+footer .nav {
+  max-width: 1700px;
+  color: #ffffffff;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0 40px;
+}
+
+footer .nav__link {
+  color: #ffffffff;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 530px) {
+  footer .nav {
+    width: 90%;
+  }
+  footer .nav__link {
+    font-size: 20px;
+  }
+}
