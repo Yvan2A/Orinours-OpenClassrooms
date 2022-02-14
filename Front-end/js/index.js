@@ -4,7 +4,7 @@ function main() {
   getArticles();
 }
 
-// Récupérer les articles depuis l'API
+// Récupérations des articles avec l'API
 function getArticles() {
   fetch("http://localhost:3000/api/teddies")
     .then((res) => res.json())
@@ -16,7 +16,7 @@ function getArticles() {
       productsContainer.style.padding = "30vh 0";
     })
 
-    // Ajouter les données de chaque produit dans le DOM
+    // Ajout des données de chaque produit dans le DOM
     .then(function (dataAPI) {
       const makeArticle = dataAPI;
       console.log(makeArticle);
