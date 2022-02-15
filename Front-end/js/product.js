@@ -86,20 +86,19 @@ function addToCart() {
       // ***** GESTION DU LOCALSTORAGE ***** //
       let arrayProductsInCart = [];
       
-      // Si le localStorage existe, on récupère son contenu, on l'insère dans le tableau arrayProductsInCart, puis on le renvoit vers le localStorage avec le nouveau produit ajouté.
+      // Si il y a un LocalStorage, on récupère son contenu, puis on l'insère dans le tableau arrayProductsInCart, et on le renvoit vers le localStorage avec le nouveau produit ajouté.
       if (localStorage.getItem("products") !== null) {
         arrayProductsInCart = JSON.parse(localStorage.getItem("products"));
+       }  
         
-        
-        // Si le LS est vide, on le crée avec le produit ajouté
-      } 
+      // Si le LocalStorage est vide, on le crée avec le produit ajouté dedans
         arrayProductsInCart.push(productAdded);
         localStorage.setItem("products", JSON.stringify(arrayProductsInCart));
       
 
-      // Effets visuels lors d'un ajout au panier
+      // Effets lors d'un ajout au panier
       confirmation.style.visibility = "visible";
-      textConfirmation.innerHTML = `Vous avez ajouté ${bearNumber.value} nounours à votre panier !`;
+      textConfirmation.innerHTML = `Vous avez ajouté ${bearNumber.value}peluches à votre panier !`;
       setTimeout("location.reload(true);", 4000);
     } else {
       confirmation.style.visibility = "visible";
@@ -107,7 +106,7 @@ function addToCart() {
       textConfirmation.style.border = "red";
       textConfirmation.style.color = "white";
       textConfirmation.style.whiteSpace = "normal";
-      textConfirmation.innerText = `La quantité doit être comprise entre 1 et 99,.`;
+      textConfirmation.innerText = `La quantité doit être comprise entre 1 et 99,.`;
     }
   });
 }

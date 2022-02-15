@@ -52,6 +52,12 @@ function getArticles() {
         productInfosDiv.appendChild(productInfoPrice);
         productInfoPrice.classList.add("product__infos__price");
 
+        // Formatage du prix pour l'afficher en euros
+        dataAPI[article].price = dataAPI[article].price / 100;
+        productInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
+          style: "currency",
+          currency: "EUR",
+        }).format(dataAPI[article].price);
       }
     });
 }

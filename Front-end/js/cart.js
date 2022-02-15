@@ -23,7 +23,7 @@ function displayCart() {
     emptyCart.style.display = "none";
   }
 
-  // Pour chaque objet dans le tableau copié du localStorage, on crée les divs de l'affichage du panier et on les remplit avec les données du tableau.
+  // Pour chaque objet dans le tableau copié du localStorage, on crée les divs de l'affichage du panier et on y ajoute les données du tableau.
   for (let produit in copyOfLS) {
     let productRow = document.createElement("div");
     cart.insertBefore(productRow, test);
@@ -70,14 +70,14 @@ function countTotalInCart() {
     return el != undefined;
   });
 
-  // Transformer en nombre chaque valeur du tableau
+  // On transforme en nombre chaque valeur du tableau
   arrayOfPrice = arrayOfPrice.map((x) => parseFloat(x));
 
-  // Additionner les valeurs du tableau pour avoir le prix total
+  // On aditionne les valeurs du tableau pour avoir le prix total
   const reducer = (acc, currentVal) => acc + currentVal;
   arrayOfPrice = arrayOfPrice.reduce(reducer);
 
-  // Affichage du prix avec formatage €
+  // Affichage du prix avec formatage en Euro
   totalPrice.innerText = `Total : ${(arrayOfPrice = new Intl.NumberFormat(
     "fr-FR",
     {
@@ -120,11 +120,11 @@ function checkFormAndPostRequest() {
       !inputMail.value ||
       !inputPhone.value
     ) {
-      erreur.innerHTML = "Vous devez renseigner tous les champs !";
+      erreur.innerHTML = "Merci de renseigner tous les champs !";
       e.preventDefault();
     } else if (isNaN(inputPhone.value)) {
       e.preventDefault();
-      erreur.innerText = "Votre numéro de téléphone n'est pas valide";
+      erreur.innerText = "Merci de saisir un numéro de téléphone valide";
     } else {
 
       // Si le formulaire est valide, le tableau productsBought contiendra un tableau d'objet qui sont les produits acheté, et order contiendra ce tableau ainsi que l'objet qui contient les infos de l'acheteur
@@ -142,7 +142,8 @@ function checkFormAndPostRequest() {
         products: productsBought,
       };
 
-      // -------  Envoi de la requête POST au back-end --------
+      // *****  Envoi de la requête POST au back-end *****
+     
       // Création de l'entête de la requête
       const options = {
         method: "POST",

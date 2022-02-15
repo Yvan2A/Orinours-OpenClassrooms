@@ -83,17 +83,17 @@ h1 {
 }
 
 .teddy-bear__bg {
-  background-image: url("/Front-end/src/img/teddy-bear.jpg");
+  background-image: url("../src/img/teddy-bear-wallpaper.jpg");
   background-size: cover;
   height: 50vh;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-self: center;
 }
 
 .teddy-bear__bg__text-group {
   color: #ffb5c2ff;
-  margin: 0 20px;
+  margin: 0, 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,7 +183,7 @@ main .products-container .products .product__infos {
   align-items: center;
   height: 20%;
   width: 100%;
-  padding: 0 20px;
+  padding: 0;
   background: #ffb5c2ff;
   display: flex;
   justify-content: space-between;
