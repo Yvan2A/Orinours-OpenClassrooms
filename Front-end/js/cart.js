@@ -23,7 +23,7 @@ function displayCart() {
     emptyCart.style.display = "none";
   }
 
-  // Pour chaque objet dans le tableau copié du localStorage, on crée les divs de l'affichage du panier et on y ajoute les données du tableau.
+  // Pour chaque objet dans le tableau copié du localStorage, on crée des divs de l'affichage du panier et on y ajoute les données du tableau.
   for (let produit in copyOfLS) {
     let productRow = document.createElement("div");
     cart.insertBefore(productRow, test);
@@ -109,7 +109,8 @@ function checkFormAndPostRequest() {
   let inputPhone = document.querySelector("#phone");
   let erreur = document.querySelector(".erreur");
 
-  // Lors d'un clic, si l'un des champs n'est pas rempli, on affiche une erreur, on empêche l'envoi du formulaire. On vérifie aussi que le numéro est un nombre, sinon même chose.
+  // Lors d'un clic, si l'un des champs n'est pas rempli, on affiche une erreur, et on empêche l'envoi du formulaire. 
+  // On vérifie aussi que le numéro est un nombre, sinon affichage d'une erreur.
   submit.addEventListener("click", (e) => {
     if (
       !inputName.value ||
@@ -127,7 +128,8 @@ function checkFormAndPostRequest() {
       erreur.innerText = "Merci de saisir un numéro de téléphone valide";
     } else {
 
-      // Si le formulaire est valide, le tableau productsBought contiendra un tableau d'objet qui sont les produits acheté, et order contiendra ce tableau ainsi que l'objet qui contient les infos de l'acheteur
+      // Si le formulaire est valide, le tableau productsBought contiendra un tableau d'objet qui sont les produits achetés.
+      // Et order contiendra ce tableau ainsi que l'objet qui contient les infos de l'acheteur.
       let productsBought = [];
       productsBought.push(copyOfLS);
 
@@ -164,12 +166,12 @@ function checkFormAndPostRequest() {
           localStorage.setItem("orderId", data.orderId);
           localStorage.setItem("total", priceConfirmation[1]);
 
-          //  On peut commenter cette ligne pour vérifier le statut 201 de la requête fetch. Le fait de préciser la destination du lien ici et non dans la balise <a> du HTML permet d'avoir le temps de placer les éléments comme l'orderId dans le localStorage avant le changement de page.
-           document.location.href = "confirmation.html";
+          
+           //document.location.href = "confirmation.html";
         })
-        .catch((err) => {
-          alert("Il y a eu une erreur : " + err);
-        });
+        //.catch((err) => {
+          //alert("Il y a eu une erreur : " + err);
+        //});
     }
   });
 }

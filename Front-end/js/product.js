@@ -33,8 +33,8 @@ function checkIf404() {
 }
 
 function getArticles() {
-  // On récupère uniquement le produit sélectionné via l'id paramètre dans la requête
 
+  // On récupère uniquement le produit sélectionné via l'id paramètre dans la requête
   fetch(`http://localhost:3000/api/teddies/${id}`)
     .then((res) => res.json())
     .catch((error) => {
@@ -58,6 +58,7 @@ function getArticles() {
         currency: "EUR",
       }).format(article.price);
 
+      // Sélection de la couleur
       let colorSelect = document.getElementById("color-select");
       for (let i = 0; i < article.colors.length; i++) {
         let option = document.createElement("option");
@@ -106,7 +107,7 @@ function addToCart() {
       textConfirmation.style.border = "red";
       textConfirmation.style.color = "white";
       textConfirmation.style.whiteSpace = "normal";
-      textConfirmation.innerText = `La quantité doit être comprise entre 1 et 99,.`;
+      textConfirmation.innerText = `La quantité n'est pas valide, elle doit être comprise entre 1 et 99,.`;
     }
   });
 }

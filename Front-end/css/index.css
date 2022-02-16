@@ -186,10 +186,11 @@ main .products-container .products .product__infos {
   padding: 0;
   background: #ffb5c2ff;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 25px;
   border-radius: 0 0 20px 20px;
   color: #dee9f7;
+  margin: 0, 20px;
 }
 
 footer {
